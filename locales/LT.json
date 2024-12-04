@@ -10,6 +10,7 @@
     "career": "Karjera",
     "services": "Paslaugos",
     "contacts": "Kontaktai",
+    "cargo": "Krovinių gabenimas",
     "contact-us-skype": "Susisiekite su mumis per Skype!"
   },
   "common": {
@@ -20,7 +21,9 @@
     "email": "El. p.:",
     "lithuania": "Lietuva",
     "fax": "Fax.",
-    "email-full": "El. paštas"
+    "phone-full": "Telefono numeris",
+    "email-full": "El. paštas",
+    "error": "There was an error."
   },
   "services": {
     "we-offer": "Ką mes siūlome",
@@ -71,5 +74,37 @@
     "candidancy": "Kandidatavimas",
     "send-cvs": "Gyvenimo aprašymus siųskite el. adresu: ",
     "more-info-phone": "Telefonas detalesnei informacijai: "
+  },
+  "cargo": {
+    "basis-title": "Veiklos pagrindas",
+    "basis-text1": "Tarptautinis standartinių, supakuotų, nepavojingų, nekontroliuojamos temperatūros, pilnų FTL krovinių pervežimas tentinėmis puspriekabėmis.",
+    "basis-text2": "Sekimo realiuoju laiku sistemos leidžia stebėti mūsų siuntas, o duomenų analizė optimizuoja maršrutus, mažina išlaidas ir gerina aplinkos tvarumą.",
+    "years-number": "+25",
+    "years-title": "Metų patirties",
+    "partners-number": "+20",
+    "partners-title": "Ištikimų partnerių",
+    "tons-number": "+15000",
+    "tons-title": "Tonų per metus pristatomų krovinių",
+    "priorities": "Prioritetai",
+    "quality": "Kokybė",
+    "quality-text": "- krovinius gabename saugiai, užsakymus vykdome laiku, informaciją teikiame greitai",
+    "flexibility": "Lankstumas",
+    "flexibility-text": "- dideli pajėgumai, ilgalaikiai susitarimai ir vienetiniai gabenimai rinkos kainomis",
+    "trailer-title": "XL/Multilock tentinės puspriekabės",
+    "trailer-measurements": "13.62 m x 2.48 m x 2.70 m (ilgis / plotis / aukštis)",
+    "trailer-max-size": "92 m³ maksimalus krovinio dydis",
+    "trailer-max-weight": "25 t naudingoji apkrova",
+    "trailer-max-pallets": "34 europadėklų vietos",
+    "security-equipment": "Krovinių tvirtinimas specialia įranga",
+    "security-belts": "20 diržų (2500 DaN)",
+    "security-corners": "40 kampų",
+    "security-aluminium-boards": "32 šoninės aliumininės lentos",
+    "security-cross-boards": "2 skersinės tvirtinimo lentos",
+    "security-mats": "Neslystantys kilimėliai",
+    "main-countries": "Pagrindinės maršrutų šalys",
+    "lithuania": "Lietuva",
+    "germany": "Vokietija",
+    "italy": "Italija",
+    "czechia": "Čekija"
   }
 }

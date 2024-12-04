@@ -5,7 +5,8 @@
         {{ t("services.we-offer") }}
       </h2>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4 my-4">
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4 my-4"
+      >
         <div class="card shadow-md">
           <i class="fa-solid fa-trophy" />
           <span class="title"> {{ t("services.experience") }} </span>
@@ -44,6 +45,6 @@
 </template>
 
 <script lang="ts" setup>
-import {useI18n} from "vue-i18n";
-const {t} = useI18n();
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 </script>

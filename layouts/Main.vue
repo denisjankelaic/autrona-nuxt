@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+
 const handleError = (error: any) => {
   error.value = null;
 };
@@ -19,16 +22,18 @@ const logError = (error: any) => {
           <slot />
         </div>
       </main>
-      <template #error="{error}">
+      <template #error="{ error }">
         <div class="flex-center flex-col gap-[30px] p-4 min-h-[50rem]">
-          <h5>
-            There was an error
-            <i class="far fa-face-sad-cry bg-yellow rounded-full"></i>
+          <h5 class="text-2xl">
+            {{ t("common.error") }}
           </h5>
           <pre> {{ error }} </pre>
           <button
+            class="py-3 px-20 bg-green hover:bg-darkGreen transition-colors rounded-sm text-white mt-8"
             @click="handleError(error)"
-            v-text="'Clear the error'" />
+          >
+            {{ t("menu.home") }}
+          </button>
         </div>
       </template>
     </NuxtErrorBoundary>

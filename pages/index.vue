@@ -5,7 +5,8 @@
         <Content>
           <div class="flex justify-center w-full">
             <div
-              class="w-full flex items-center justify-center gap-2 text-green max-w-96">
+              class="w-full flex items-center justify-center gap-2 text-green max-w-96"
+            >
               <hr class="w-full border-green" />
               <h2 class="uppercase italic">{{ t("home.experience") }}</h2>
               <hr class="w-full border-green" />
@@ -20,12 +21,14 @@
             </h1>
             <div>
               <button
-                class="text-gray-500 bg-transparent mt-4 text-sm flex items-center">
+                class="text-gray-500 bg-transparent mt-4 text-sm flex items-center"
+              >
                 <NuxtLink to="/contacts">
                   {{ t("common.contact-us") }}
                 </NuxtLink>
                 <i
-                  class="fa-solid fa-chevron-right text-green text-xs ml-2"></i>
+                  class="fa-solid fa-chevron-right text-green text-xs ml-2"
+                ></i>
               </button>
             </div>
           </div>
@@ -36,12 +39,14 @@
           class="block md:hidden"
           src="/hero/hero-mobile.jpg"
           format="webp"
-          quality="95" />
+          quality="98"
+        />
         <NuxtImg
           class="hidden md:block w-full"
           src="/hero/hero-desktop.png"
           format="webp"
-          quality="97" />
+          quality="98"
+        />
       </div>
       <div class="bg-white py-16">
         <Services />
@@ -52,8 +57,8 @@
 </template>
 
 <script lang="ts" setup>
-import {useI18n} from "vue-i18n";
-const {t} = useI18n();
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 
 definePageMeta({
   layoutTransition: true,

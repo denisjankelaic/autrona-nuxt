@@ -59,17 +59,20 @@
           </div>
           <div class="flex gap-4 flex-col md:flex-row">
             <div
-              class="w-full h-[300px] white-box shadow-md rounded-md !p-0 overflow-hidden">
+              class="w-full h-[300px] white-box shadow-md rounded-md !p-0 overflow-hidden"
+            >
               <LMap
                 ref="map"
                 :zoom="zoom"
                 :center="[54.41543, 24.00727]"
-                :use-global-leaflet="false">
+                :use-global-leaflet="false"
+              >
                 <LTileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&amp;copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
                   layer-type="base"
-                  name="OpenStreetMap" />
+                  name="OpenStreetMap"
+                />
                 <LMarker :lat-lng="[54.41543, 24.00727]" />
               </LMap>
             </div>
@@ -100,14 +103,15 @@
                   ><b>{{ t("contacts.vat-code") }}</b> LT499708716</span
                 >
                 <span
-                  ><b>{{ t("common.phone") }}</b> +370 315 77614</span
+                  ><b>{{ t("common.phone-full") }}</b> +370 315 77614</span
                 >
                 <span
                   ><b>{{ t("common.fax") }}</b> +370 315 77269</span
                 >
                 <span
-                  ><b>{{ t("common.email-full") }}</b> info@autrona.lt</span
-                >
+                  ><b>{{ t("common.email-full") }}</b>
+                  info@autrona.lt
+                </span>
               </p>
             </div>
           </div>
@@ -118,8 +122,8 @@
 </template>
 
 <script lang="ts" setup>
-import {useI18n} from "vue-i18n";
-const {t} = useI18n();
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 const zoom = ref(15);
 </script>
 

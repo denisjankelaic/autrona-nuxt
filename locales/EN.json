@@ -10,6 +10,7 @@
     "career": "Career",
     "services": "Services",
     "contacts": "Contacts",
+    "cargo": "Cargo transportation",
     "contact-us-skype": "Contact us on Skype!"
   },
   "common": {
@@ -20,7 +21,8 @@
     "email": "Email:",
     "lithuania": "Lithuania",
     "fax": "Fax.",
-    "email-full": "Email"
+    "email-full": "Email",
+    "error": "Įvyko klaida."
   },
   "services": {
     "we-offer": "What we offer",
@@ -71,5 +73,37 @@
     "candidancy": "Candidancy",
     "send-cvs": "Please send your CV to the following email address:",
     "more-info-phone": "Phone for more detailed information: +370 699 45118"
+  },
+  "cargo": {
+    "basis-title": "Basis of activity",
+    "basis-text1": "International transportation of standard, packaged, non-hazardous, non-temperature controlled, full FTL cargo by tilt semi-trailer.",
+    "basis-text2": "Real-time tracking systems allow us to monitor our shipments, while data analysis optimizes routes, reduces costs and improves environmental sustainability.",
+    "years-number": "+25",
+    "years-title": "Years of experience",
+    "partners-number": "+20",
+    "partners-title": "Loyal partners",
+    "tons-number": "+15000",
+    "tons-title": "Tons of cargo delivered per year",
+    "priorities": "Priorities",
+    "quality": "Quality",
+    "quality-text": "- we transport cargo safely, fulfill orders on time, provide information quickly",
+    "flexibility": "Flexibility",
+    "flexibility-text": "- large capacities, long-term agreements and unit shipments at market prices",
+    "trailer-title": "XL/Multilock tilt semi-trailers",
+    "trailer-measurements": "13.62 m x 2.48 m x 2.70 m (length / width / height)",
+    "trailer-max-size": "92 m³ maximum cargo size",
+    "trailer-max-weight": "25 t payload",
+    "trailer-max-pallets": "34 places for euro trays",
+    "security-equipment": "Cargo securing with special equipment",
+    "security-belts": "20 belts (2500 DaN)",
+    "security-corners": "40 angles",
+    "security-aluminium-boards": "32 side aluminum boards",
+    "security-cross-boards": "2 transverse mounting boards",
+    "security-mats": "Non-slip mats",
+    "main-countries": "Main route countries",
+    "lithuania": "Lithuania",
+    "germany": "Germany",
+    "italy": "Italy",
+    "czechia": "Czech Republic"
   }
 }

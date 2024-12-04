@@ -1,87 +1,99 @@
 <template>
-  <div
-    id="header"
-    class="header w-full flex top-0 z-[100000]">
+  <div id="header" class="header w-full flex top-0 z-[100000]">
     <div class="hidden md:flex w-full">
       <Content>
         <div class="flex py-4 justify-between w-full gap-4">
           <NuxtLink to="/">
-            <img
-              src="/logo_transparent.png"
-              class="h-7 object-contain" />
+            <img src="/logo_transparent.png" class="h-7 object-contain" />
           </NuxtLink>
 
           <div
-            class="flex justify-between w-full text-white max-w-[30rem] items-center">
+            class="flex justify-between w-full text-white max-w-[30rem] items-center"
+          >
             <NuxtLink to="/">{{ t("menu.home") }}</NuxtLink>
-            <NuxtLink to="/cargo">Krovinių gabenimas</NuxtLink>
+            <NuxtLink to="/cargo">{{ t("menu.cargo") }}</NuxtLink>
 
             <NuxtLink to="/contacts">{{ t("menu.contacts") }}</NuxtLink>
             <NuxtLink to="/career">{{ t("menu.career") }}</NuxtLink>
           </div>
           <div class="icons flex gap-2">
-            <NuxtLink to="mailto:info@autrona.lt">
-              <i
-                class="fa-regular fa-envelope text-white text-lg w-6 h-6 flex-center"></i>
-            </NuxtLink>
+            <a href="mailto:info@autrona.lt" target="_blank">
+              <i class="fa-regular fa-envelope text-lg w-6 h-6 flex-center"></i>
+            </a>
             <a
               href="https://web.skype.com/share?contact=autrona"
-              target="_blank">
-              <i
-                class="fa-brands fa-skype text-white text-lg w-6 h-6 flex-center"></i>
+              target="_blank"
+            >
+              <i class="fa-brands fa-skype text-lg w-6 h-6 flex-center"></i>
+            </a>
+            <a href="tel:%2B37065095557" target="_blank">
+              <i class="fa-brands fa-viber text-lg w-6 h-6 flex-center"></i>
+            </a>
+            <a href="tel:%2B37065095557" target="_blank">
+              <i class="fa-brands fa-whatsapp text-lg w-6 h-6 flex-center"></i>
             </a>
             <FormKit
               type="select"
               name="locale"
               v-model="locale"
-              :options="availableLocales" />
+              :options="availableLocales"
+              class="hover:cursor-pointer"
+            />
           </div>
         </div>
       </Content>
     </div>
     <div class="flex md:hidden items-center relative">
-      <div
-        @click="onHamburgerClick"
-        class="p-4 w-12">
+      <div @click="onHamburgerClick" class="p-4 w-12">
         <i
           class="text-white fa-solid"
-          :class="{'fa-bars': !isOpen, 'fa-times': isOpen}">
+          :class="{ 'fa-bars': !isOpen, 'fa-times': isOpen }"
+        >
         </i>
       </div>
-      <NuxtLink
-        to="/"
-        class="mx-4">
-        <img
-          src="/logo_transparent.png"
-          class="h-7" />
+      <NuxtLink to="/" class="mx-4">
+        <img src="/logo_transparent.png" class="h-7" />
       </NuxtLink>
       <div
         class="sidebar absolute top-[51px] left-0 bg-pastelWhite h-screen w-screen"
-        :class="{open: isOpen, closed: !isOpen}">
+        :class="{ open: isOpen, closed: !isOpen }"
+      >
         <div class="flex w-full flex-col">
           <NuxtLink to="/">{{ t("menu.home") }}</NuxtLink>
           <hr />
-          <NuxtLink to="/cargo">Krovinių gabenimas</NuxtLink>
+          <NuxtLink to="/cargo">{{ t("menu.cargo") }}</NuxtLink>
           <hr />
           <NuxtLink to="/contacts">{{ t("menu.contacts") }}</NuxtLink>
           <hr />
           <NuxtLink to="/career">{{ t("menu.career") }}</NuxtLink>
-          <hr />
         </div>
         <div class="flex flex-col">
-          <NuxtLink
-            to="mailto:info@autrona.lt"
-            class="flex items-center">
+          <div class="p-4 mt-4 uppercase tracking-wider font-medium text-sm">
+            {{ t("common.contact-us") }}:
+          </div>
+          <hr />
+          <a href="mailto:info@autrona.lt" class="flex items-center">
             <i class="fa-regular fa-envelope text-lg w-8" />
             info@autrona.lt
-          </NuxtLink>
+          </a>
           <hr />
           <a
             href="https://web.skype.com/share?contact=autrona"
             target="_blank"
-            class="flex items-center">
+            class="flex items-center"
+          >
             <i class="fa-brands fa-skype text-lg w-8" />
-            {{ t("menu.contact-us-skype") }}
+            Skype
+          </a>
+          <hr />
+          <a href="viber://contact?number=%2B37068442717">
+            <i class="fa-brands fa-viber text-lg w-8" />
+            Viber
+          </a>
+          <hr />
+          <a href="https://wa.me/%2B37068442717">
+            <i class="fa-brands fa-whatsapp text-lg w-8" />
+            WhatsApp
           </a>
           <hr />
           <div class="lang-select flex items-center">
@@ -91,7 +103,8 @@
               type="select"
               name="locale"
               v-model="locale"
-              :options="availableLocales" />
+              :options="availableLocales"
+            />
           </div>
         </div>
       </div>
@@ -100,9 +113,9 @@
 </template>
 
 <script lang="ts" setup>
-import {useI18n} from "vue-i18n";
+import { useI18n } from "vue-i18n";
 import lockScroll from "../utils/lockScroll";
-const {t, locale, availableLocales} = useI18n();
+const { t, locale, availableLocales } = useI18n();
 const isOpen = ref(false);
 
 const onHamburgerClick = () => {
@@ -119,7 +132,7 @@ watch(
   },
   {
     immediate: true,
-  }
+  },
 );
 </script>
 
@@ -151,12 +164,25 @@ a.router-link-active {
   padding: 0.25rem;
 }
 
+.icons a {
+  color: white;
+  height: 1.5rem;
+  width: 1.5rem;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: black;
+  background: white;
+}
+
 :deep(.formkit-select-icon) {
   display: none;
 }
 
 :deep(.formkit-outer) {
   margin-bottom: 0;
+  margin-left: 1rem;
 }
 
 .sidebar {
@@ -177,6 +203,7 @@ a.router-link-active {
 :deep(.formkit-input) {
   padding: 0.25rem;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
