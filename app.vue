@@ -7,9 +7,9 @@
 <script setup lang="ts">
 import "@unocss/reset/tailwind-compat.css";
 import urlJoin from "url-join";
-import { useI18n } from "vue-i18n";
+import {useI18n} from "vue-i18n";
 
-const { t } = useI18n();
+const {t} = useI18n();
 const image = useImage();
 const route = useRoute();
 
@@ -24,7 +24,7 @@ const heroUrl = computed(() => {
 });
 
 //TODO: Change to actual url.
-const publicUrl = "www.autrona-nuxt.vercel.app";
+const publicUrl = "https://autrona-nuxt.vercel.app/";
 
 const metaImg = computed(() => {
   return typeof window !== "undefined"
