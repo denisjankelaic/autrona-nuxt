@@ -97,12 +97,12 @@
             Skype
           </a>
           <hr />
-          <a href="viber://contact?number=%2B37068442717">
+          <a href="viber://contact?number=%2B37065095557">
             <i class="fa-brands fa-viber text-lg w-8" />
             Viber
           </a>
           <hr />
-          <a href="https://wa.me/%2B37068442717">
+          <a href="https://wa.me/%2B37065095557">
             <i class="fa-brands fa-whatsapp text-lg w-8" />
             WhatsApp
           </a>

@@ -29,12 +29,12 @@
                 class="fa-brands fa-skype text-white text-lg w-6 h-6 flex-center"
               />
             </a>
-            <a href="viber://contact?number=%2B37068442717">
+            <a href="viber://contact?number=%2B37065095557">
               <i
                 class="fa-brands fa-viber text-white text-lg w-6 h-6 flex-center"
               />
             </a>
-            <a href="https://wa.me/%2B37068442717">
+            <a href="https://wa.me/%2B37065095557">
               <i
                 class="fa-brands fa-whatsapp text-white text-lg w-6 h-6 flex-center"
               />
@@ -54,12 +54,12 @@
                 class="fa-brands fa-skype text-white text-lg w-6 h-6 flex-center"
               />
             </a>
-            <a href="tel:%2B37068442717">
+            <a href="tel:%2B37065095557">
               <i
                 class="fa-brands fa-viber text-white text-lg w-6 h-6 flex-center"
               />
             </a>
-            <a href="tel:%2B37068442717">
+            <a href="tel:%2B37065095557">
               <i
                 class="fa-brands fa-whatsapp text-white text-lg w-6 h-6 flex-center"
               />
