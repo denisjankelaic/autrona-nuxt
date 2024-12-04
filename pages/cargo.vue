@@ -65,6 +65,18 @@
                 </p>
               </div>
             </div>
+            <div>
+              <div
+                class="uppercase tracking-widest font-semibold text-text2 my-4">
+                XL/Multilock tentinės puspriekabės
+              </div>
+              <div class="w-full relative flex gap-4 flex-col">
+                <p>13.62 m x 2.48 m x 2.70 m (ilgis / plotis / aukštis)</p>
+                <p>92 m³ maksimalus krovinio dydis</p>
+                <p>25 t naudingoji apkrova</p>
+                <p>34 europadėklų vietos</p>
+              </div>
+            </div>
             <div class="flex flex-col gap-4">
               <div
                 class="uppercase tracking-widest font-semibold text-text2 my-4">
@@ -81,19 +93,18 @@
             <h1 class="text-2xl text-center uppercase">
               Pagrindinės maršrutų šalys
             </h1>
-            <div
-              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 lg:gap-4 my-4">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 lg:gap-4 my-4">
+              <div class="card shadow-md p-2">
+                <div
+                  class="flag shadow-sm"
+                  v-html="LT"></div>
+                <span class="subtitle"> Lietuva </span>
+              </div>
               <div class="card shadow-md p-2">
                 <div
                   class="flag shadow-sm"
                   v-html="DE" />
                 <span class="subtitle"> Vokietija </span>
-              </div>
-              <div class="card shadow-md p-2">
-                <div
-                  class="flag shadow-sm"
-                  v-html="PL"></div>
-                <span class="subtitle"> Lenkija </span>
               </div>
               <div class="card shadow-md p-2">
                 <div
@@ -104,20 +115,8 @@
               <div class="card shadow-md p-2">
                 <div
                   class="flag shadow-sm"
-                  v-html="ES"></div>
-                <span class="subtitle"> Ispanija </span>
-              </div>
-              <div class="card shadow-md p-2">
-                <div
-                  class="flag shadow-sm"
-                  v-html="FR"></div>
-                <span class="subtitle"> Prancūzija </span>
-              </div>
-              <div class="card shadow-md p-2">
-                <div
-                  class="flag shadow-sm"
-                  v-html="CH"></div>
-                <span class="subtitle"> Šveicarija </span>
+                  v-html="CZ"></div>
+                <span class="subtitle"> Čekija </span>
               </div>
             </div>
           </div>
@@ -129,7 +128,7 @@
 
 <script lang="ts" setup>
 import {useI18n} from "vue-i18n";
-import {DE, PL, IT, ES, FR, CH} from "country-flag-icons/string/3x2";
+import {DE, LT, IT, CZ} from "country-flag-icons/string/3x2";
 
 const {t} = useI18n();
 </script>

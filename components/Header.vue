@@ -61,6 +61,8 @@
         <div class="flex w-full flex-col">
           <NuxtLink to="/">{{ t("menu.home") }}</NuxtLink>
           <hr />
+          <NuxtLink to="/cargo">Krovinių gabenimas</NuxtLink>
+          <hr />
           <NuxtLink to="/contacts">{{ t("menu.contacts") }}</NuxtLink>
           <hr />
           <NuxtLink to="/career">{{ t("menu.career") }}</NuxtLink>
