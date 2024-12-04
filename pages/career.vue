@@ -52,14 +52,16 @@
               class="block md:hidden"
               src="/hero/career-mobile.jpg"
               format="webp"
-              quality="97"
+              quality="95"
+              height="400"
               alt="Career page hero" />
 
             <NuxtImg
               src="/hero/career-desktop.jpg"
               class="hidden md:block h-full w-full object-cover"
               format="webp"
-              quality="97"
+              quality="95"
+              height="600"
               alt="Career page hero" />
           </div>
         </div>
