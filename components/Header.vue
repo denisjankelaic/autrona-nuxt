@@ -165,7 +165,11 @@ a:hover {
 }
 
 a.router-link-active {
-  color: theme("colors.green");
+  color: theme("colors.lightGreen");
+}
+
+.sidebar a.router-link-active {
+  color: theme("colors.darkGreen");
 }
 
 .icons i {

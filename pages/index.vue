@@ -5,10 +5,10 @@
         <Content>
           <div class="flex justify-center w-full">
             <div
-              class="w-full flex items-center justify-center gap-2 text-green max-w-96">
-              <hr class="w-full border-green" />
+              class="w-full flex items-center justify-center gap-2 text-lightGreen max-w-96">
+              <hr class="w-full border-lightGreen" />
               <h2 class="uppercase italic">{{ t("home.experience") }}</h2>
-              <hr class="w-full border-green" />
+              <hr class="w-full border-lightGreen" />
             </div>
           </div>
           <div class="py-8 flex flex-col justify-center items-center">
@@ -20,12 +20,12 @@
             </h1>
             <div>
               <button
-                class="text-gray-500 bg-transparent p-4 text-sm flex items-center">
+                class="text-gray-300 bg-transparent p-4 text-sm flex items-center hover:[&>a]:underline">
                 <NuxtLink to="/contacts">
                   {{ t("common.contact-us") }}
                 </NuxtLink>
                 <i
-                  class="fa-solid fa-chevron-right text-green text-xs ml-2"></i>
+                  class="fa-solid fa-chevron-right text-lightGreen text-xs ml-2"></i>
               </button>
             </div>
           </div>

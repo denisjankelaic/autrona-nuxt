@@ -14,6 +14,7 @@ export default defineConfig({
   ],
   theme: {
     colors: {
+      lightGreen: "#489b5f",
       green: "#28662d",
       darkGreen: "#1D4920",
       red: "#EA0000",
