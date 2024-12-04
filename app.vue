@@ -23,7 +23,8 @@ const heroUrl = computed(() => {
   });
 });
 
-const publicUrl = "www.autrona.lt";
+//TODO: Change to actual url.
+const publicUrl = "www.autrona-nuxt.vercel.app";
 
 const metaImg = computed(() => {
   return typeof window !== "undefined"
