@@ -7,14 +7,14 @@
 <script setup lang="ts">
 import "@unocss/reset/tailwind-compat.css";
 import urlJoin from "url-join";
-import {useI18n} from "vue-i18n";
+import { useI18n } from "vue-i18n";
 
-const {t} = useI18n();
+const { t } = useI18n();
 const image = useImage();
 const route = useRoute();
 
 const heroUrl = computed(() => {
-  let originalUrl = `banners/cargo-side.jpg`;
+  let originalUrl = `hero/cargo-side.jpg`;
 
   return image(originalUrl, {
     format: "webp",
