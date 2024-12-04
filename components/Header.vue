@@ -8,7 +8,8 @@
           <NuxtLink to="/">
             <img
               src="/logo_transparent.png"
-              class="h-7 object-contain" />
+              class="h-7 object-contain"
+              alt="Autrona" />
           </NuxtLink>
 
           <div
@@ -64,7 +65,8 @@
         class="mx-4">
         <img
           src="/logo_transparent.png"
-          class="h-7" />
+          class="h-7"
+          alt="Autrona" />
       </NuxtLink>
       <div
         class="sidebar absolute top-[51px] left-0 bg-pastelWhite h-screen w-screen"

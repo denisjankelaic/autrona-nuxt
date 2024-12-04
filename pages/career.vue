@@ -47,21 +47,20 @@
             </div>
           </div>
           <div
-            class="h-full max-h-[600px] overflow-hidden rounded-md shadow-md"
-          >
+            class="h-full max-h-[600px] overflow-hidden rounded-md shadow-md">
             <NuxtImg
               class="block md:hidden"
               src="/hero/career-mobile.jpg"
               format="webp"
               quality="97"
-            />
+              alt="Career page hero" />
 
             <NuxtImg
               src="/hero/career-desktop.jpg"
               class="hidden md:block h-full w-full object-cover"
               format="webp"
               quality="97"
-            />
+              alt="Career page hero" />
           </div>
         </div>
       </Content>
@@ -70,6 +69,6 @@
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+import {useI18n} from "vue-i18n";
+const {t} = useI18n();
 </script>

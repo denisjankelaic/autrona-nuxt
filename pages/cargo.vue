@@ -7,6 +7,7 @@
           src="/hero/cargo-side.jpg"
           format="webp"
           quality="98"
+          alt="Cargo page hero"
         />
         <Content>
           <div class="flex flex-col gap-8">

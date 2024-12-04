@@ -22,7 +22,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
     "@formkit/nuxt",
-    "@nuxtjs/leaflet", 
+    "@nuxtjs/leaflet",
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap",
   ],
   css: [
     "~/assets/styles/animations/_page-transitions.css",
@@ -44,7 +46,16 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      {name: "Roboto", provider: "google", weights: [400, 500, 600, 700, 900]},
+      {
+        name: "Roboto",
+        provider: "google",
+        weights: [300, 400, 500, 600],
+      },
+      {
+        name: "Montseratt",
+        provider: "google",
+        weights: [300, 400, 500, 600],
+      },
     ],
 
     defaults: {
@@ -52,6 +63,15 @@ export default defineNuxtConfig({
     },
   },
 
-  target: "static",
+  site: {
+    url: "https://autrona-nuxt.vercel.app/",
+    name: "Autrona",
+  },
   compatibilityDate: "2024-11-26",
+  content: {
+    documentDriven: true,
+  },
+  sitemap: {
+    strictNuxtContentPaths: true,
+  },
 });
