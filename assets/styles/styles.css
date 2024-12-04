@@ -1,0 +1,82 @@
+body,
+* {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  /* color: theme("colors.red"); */
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 4px;
+  background-color: theme("colors.green");
+  color: white;
+}
+
+.card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 6px;
+  background-color: theme("colors.pastelWhite");
+}
+
+.card i {
+  font-size: 2rem;
+}
+
+.card .title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: theme("colors.text1");
+}
+
+.card .subtitle {
+  font-size: 0.85rem;
+  color: theme("colors.text2");
+}
+
+.white-box {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.white-box b {
+  margin-right: 0.25rem;
+}

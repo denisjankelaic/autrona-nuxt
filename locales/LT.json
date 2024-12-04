@@ -1,0 +1,75 @@
+{
+  "language": "Kalba",
+  "home": {
+    "experience": "Patirtis",
+    "slogan1": "Pagrįsta pasitikėjimu.",
+    "slogan2": "Varoma tobulumo."
+  },
+  "menu": {
+    "home": "Pradžia",
+    "career": "Karjera",
+    "services": "Paslaugos",
+    "contacts": "Kontaktai",
+    "contact-us-skype": "Susisiekite su mumis per Skype!"
+  },
+  "common": {
+    "language": "Kalba",
+    "contact-us": "Susisiekite su mumis",
+    "footer-autrona": "© Autronos tarptautiniai pervežimai",
+    "phone": "Tel:",
+    "email": "El. p.:",
+    "lithuania": "Lietuva",
+    "fax": "Fax.",
+    "email-full": "El. paštas"
+  },
+  "services": {
+    "we-offer": "Ką mes siūlome",
+    "experience": "Patirtis",
+    "experience-text": "Ilgametė krovinių gabenimo patirtis Europoje ir NVS šalyse",
+    "safety": "Saugumas",
+    "safety-text": "Transporto priemonės, atitinkančios EURO-3, EURO-4, EURO-5 saugos standartus",
+    "documentation": "Dokumentacija",
+    "documentation-text": "Muitinės formalumų tvarkymas",
+    "tracking": "Krovinio sekimas",
+    "tracking-text": "Krovinių judėjimo sekimas 24 valandas per parą",
+    "speed": "Greitis",
+    "speed-text": "Santykinai didelis greitis ir maža transportavimo rizika",
+    "qualification": "Kvalifikacija",
+    "qualification-text": "Aukštos kvalifikacijos darbuotojai"
+  },
+  "about": {
+    "about": "Apie mus",
+    "about-text1": "1998 metais veiklą pradėjusi UAB „Autrona“ šiandien savo klientams gali pasiūlyti kokybiškas, jų poreikius atitinkančias logistikos paslaugas visoje Europoje ir NVS šalyse. ",
+    "about-text2": "Didžiuojamės, kad jau keletą metų iš eilės UAB „Autrona“ gauna „Metų gazelės“ apdovanojimą. Nuo 1998 metų įmonė yra Lietuvos nacionalinės vežėjų automobiliais asociacijos narė.",
+    "our-mission": "Mūsų misija",
+    "our-mission-text": "Teikti efektyvias ir profesionalias logistikos paslaugas – saugiai, kokybiškai ir greitai pristatyti Jūsų krovinį į paskirties vietą. ",
+    "our-vision": "Mūsų vizija",
+    "our-vision-text1": "Kaip patikimas ir novatoriškas partneris, dirbame tam, kad taptume jūsų sėkmės istorijos dalimi.",
+    "our-vision-text2": "Didžiausia mūsų stiprybė -",
+    "our-vision-text3": "profesionalių darbuotojų komanda ir nuolatinės investicijos į naujas ir modernias transporto priemones, nes tik tai užtikrina teikiamų paslaugų kokybę ir efektyvumą."
+  },
+  "contacts": {
+    "director": "Direktorius",
+    "personnel-specialist": "Personalo ir logistikos specialistė",
+    "transport-manager": "Transporto vadovas",
+    "transport-manager-w": "Transporto vadovė",
+    "correspondence": "Adresas korespondencijai",
+    "registration-address": "Registracijos adresas",
+    "company-code": "Įmonės kodas",
+    "vat-code": "PVM kodas"
+  },
+  "career": {
+    "career": "Karjera",
+    "looking-for": "Šiuo metu ieškome šių specialistų:",
+    "driver": "Vairuotojas-ekspeditorius",
+    "nature-of-work": "Darbo pobūdis:",
+    "cargo-transportation": "Krovinių gabenimas iš Vakarų Europos į NVS šalis",
+    "requirements": "Reikalavimai:",
+    "required-experience": "<b>Būtina</b>darbo patirtis krovinių pervežimo srityje",
+    "driving-license": "B, CE, C1E, C kategorijų vairuotojo pažymėjimai",
+    "languages": "Geras rusų kalbos mokėjimas, kitų kalbų mokėjimas - didelis privalumas",
+    "candidancy": "Kandidatavimas",
+    "send-cvs": "Gyvenimo aprašymus siųskite el. adresu: ",
+    "more-info-phone": "Telefonas detalesnei informacijai: "
+  }
+}

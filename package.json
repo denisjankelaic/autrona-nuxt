@@ -1,0 +1,36 @@
+{
+  "name": "Autrona",
+  "description": "Autrona - Tarptautiniai pervežimai Autrona",
+  "private": false,
+  "scripts": {
+    "dev": "nuxt dev --port 6636",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "serve": "esno .output/server/index.mjs",
+    "p:ish": "pnpm install --shamefully-hoist",
+    "p:up": "pnpm up"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.1",
+    "@iconify/json": "^2.2.208",
+    "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.8.1",
+    "@unocss/nuxt": "^0.64.1",
+    "@unocss/reset": "^0.64.1",
+    "@vueuse/nuxt": "^10.9.0",
+    "nuxt": "^3.14.1592",
+    "unplugin-icons": "^0.17.4",
+    "unplugin-vue-components": "^0.25.2"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^1.6.9",
+    "@nuxt/fonts": "^0.10.2",
+    "@nuxtjs/leaflet": "^1.2.4",
+    "country-flag-icons": "^1.5.13",
+    "leaflet": "^1.9.4",
+    "postmark": "^4.0.5",
+    "vue-i18n": "^9.13.1"
+  }
+}

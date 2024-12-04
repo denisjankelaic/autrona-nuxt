@@ -1,0 +1,75 @@
+{
+  "language": "Language",
+  "home": {
+    "experience": "Experience",
+    "slogan1": "Based on trust.",
+    "slogan2": "Driven by perfection."
+  },
+  "menu": {
+    "home": "Home",
+    "career": "Career",
+    "services": "Services",
+    "contacts": "Contacts",
+    "contact-us-skype": "Contact us on Skype!"
+  },
+  "common": {
+    "language": "Language",
+    "contact-us": "Contact us",
+    "footer-autrona": "© Autrona international transportation",
+    "phone": "Phone:",
+    "email": "Email:",
+    "lithuania": "Lithuania",
+    "fax": "Fax.",
+    "email-full": "Email"
+  },
+  "services": {
+    "we-offer": "What we offer",
+    "experience": "Experience",
+    "experience-text": "Long-term experience in transporting goods in Europe and the CIS countries",
+    "safety": "Safety",
+    "safety-text": "Vehicles that meet EURO-3, EURO-4, EURO-5 safety standards",
+    "documentation": "Documentation",
+    "documentation-text": "Handling customs formalities",
+    "tracking": "Cargo tracking",
+    "tracking-text": "Cargo movement tracking 24 hours a day",
+    "speed": "Speed",
+    "speed-text": "Relatively high speed and low transportation risk",
+    "qualification": "Qualification",
+    "qualification-text": "Highly qualified employees"
+  },
+  "about": {
+    "about": "About us",
+    "about-text1": "Having started its operations in 1998, UAB \"Autrona\" can today offer its clients high-quality logistics services that meet their needs throughout Europe and the CIS countries. By responsibly fulfilling our obligations, we have earned the trust of our regular clients and partners.",
+    "about-text2": "We are proud that UAB \"Autrona\" has been awarded the \"Gazelle of the Year\" award for several years in a row. Since 1998, the company has been a member of the Lithuanian National Association of Road Carriers.",
+    "our-mission": "Our mission",
+    "our-mission-text": "To provide efficient and professional logistics services - to deliver your cargo safely, qualitatively and quickly to its destination. To carry out activities with a responsible attitude towards the environment and using the latest technologies.",
+    "our-vision": "Our vision",
+    "our-vision-text1": "As a reliable and innovative partner, we work to become a part of your success story.",
+    "our-vision-text2": "Our greatest strength -",
+    "our-vision-text3": "a team of professional employees and continuous investments in new and modern vehicles, because only this ensures the quality and efficiency of the services provided."
+  },
+  "contacts": {
+    "director": "Director",
+    "personnel-specialist": "Personnel and Logistics Specialist",
+    "transport-manager": "Transport Manager",
+    "transport-manager-w": "Transport Manager",
+    "correspondence": "Correspondence address",
+    "registration-address": "Registration address",
+    "company-code": "Company code",
+    "vat-code": "VAT code"
+  },
+  "career": {
+    "career": "Career",
+    "looking-for": "We are currently looking for the following specialists:",
+    "driver": "Driver-Forwarder",
+    "nature-of-work": "Nature of work:",
+    "cargo-transportation": "Cargo transportation from Western Europe to CIS countries",
+    "requirements": "Requirements:",
+    "required-experience": "Work experience in the field of freight transportation is <b>required</b>",
+    "driving-license": "Driving licenses B, CE, C1E, C categories",
+    "languages": "Good command of Russian, knowledge of other languages ​is a great advantage",
+    "candidancy": "Candidancy",
+    "send-cvs": "Please send your CV to the following email address:",
+    "more-info-phone": "Phone for more detailed information: +370 699 45118"
+  }
+}
