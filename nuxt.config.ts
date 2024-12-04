@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Autrona",
-      link: [{rel: "icon", type: "image/*", href: "/favicon.svg"}],
+      link: [{rel: "icon", type: "image/*", href: "/favicon.png"}],
     },
     pageTransition: {name: "page", mode: "out-in"},
     layoutTransition: {name: "layout", mode: "out-in"},
