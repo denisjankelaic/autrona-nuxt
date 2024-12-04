@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <NuxtPage />
-  </div>
+  <Html :lang="locale">
+    <div>
+      <NuxtPage />
+    </div>
+  </Html>
 </template>
 
 <script setup lang="ts">
@@ -9,7 +11,7 @@ import "@unocss/reset/tailwind-compat.css";
 import urlJoin from "url-join";
 import {useI18n} from "vue-i18n";
 
-const {t} = useI18n();
+const {t, locale} = useI18n();
 const image = useImage();
 const route = useRoute();
 
