@@ -36,14 +36,12 @@
           class="block md:hidden"
           src="/hero/hero-mobile.jpg"
           format="webp"
-          quality="98"
           height="450"
           alt="Home page hero" />
         <NuxtImg
           class="hidden md:block w-full"
           src="/hero/hero-desktop.png"
           format="webp"
-          quality="98"
           height="450"
           alt="Home page hero" />
       </div>
