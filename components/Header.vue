@@ -1,7 +1,5 @@
 <template>
-  <div
-    id="header"
-    class="header w-full flex top-0 z-[100000]">
+  <div id="header" class="header w-full flex top-0 z-[100000]">
     <div class="hidden md:flex w-full">
       <Content>
         <div class="flex py-4 justify-between w-full gap-4">
@@ -9,11 +7,13 @@
             <img
               src="/logo_transparent.png"
               class="h-7 object-contain"
-              alt="Autrona" />
+              alt="Autrona"
+            />
           </NuxtLink>
 
           <div
-            class="flex justify-between w-full text-white max-w-[30rem] items-center">
+            class="flex justify-between w-full text-white max-w-[30rem] items-center"
+          >
             <NuxtLink to="/">{{ t("menu.home") }}</NuxtLink>
             <NuxtLink to="/cargo">{{ t("menu.cargo") }}</NuxtLink>
 
@@ -21,24 +21,19 @@
             <NuxtLink to="/career">{{ t("menu.career") }}</NuxtLink>
           </div>
           <div class="icons flex gap-2">
-            <a
-              href="mailto:info@autrona.lt"
-              target="_blank">
+            <a href="mailto:info@autrona.lt" target="_blank">
               <i class="fa-regular fa-envelope text-lg w-6 h-6 flex-center"></i>
             </a>
             <a
               href="https://web.skype.com/share?contact=autrona"
-              target="_blank">
+              target="_blank"
+            >
               <i class="fa-brands fa-skype text-lg w-6 h-6 flex-center"></i>
             </a>
-            <a
-              href="tel:%2B37065095557"
-              target="_blank">
+            <a href="tel:%2B37065095557" target="_blank">
               <i class="fa-brands fa-viber text-lg w-6 h-6 flex-center"></i>
             </a>
-            <a
-              href="tel:%2B37065095557"
-              target="_blank">
+            <a href="tel:%2B37065095557" target="_blank">
               <i class="fa-brands fa-whatsapp text-lg w-6 h-6 flex-center"></i>
             </a>
             <FormKit
@@ -46,31 +41,27 @@
               name="locale"
               v-model="locale"
               :options="availableLocales"
-              class="hover:cursor-pointer" />
+              class="hover:cursor-pointer"
+            />
           </div>
         </div>
       </Content>
     </div>
     <div class="flex md:hidden items-center relative">
-      <div
-        @click="onHamburgerClick"
-        class="p-4 w-12">
+      <div @click="onHamburgerClick" class="p-4 w-12">
         <i
           class="text-white fa-solid"
-          :class="{'fa-bars': !isOpen, 'fa-times': isOpen}">
+          :class="{ 'fa-bars': !isOpen, 'fa-times': isOpen }"
+        >
         </i>
       </div>
-      <NuxtLink
-        to="/"
-        class="mx-4">
-        <img
-          src="/logo_transparent.png"
-          class="h-7"
-          alt="Autrona" />
+      <NuxtLink to="/" class="mx-4">
+        <img src="/logo_transparent.png" class="h-7" alt="Autrona" />
       </NuxtLink>
       <div
         class="sidebar absolute top-[51px] left-0 bg-pastelWhite h-screen w-screen"
-        :class="{open: isOpen, closed: !isOpen}">
+        :class="{ open: isOpen, closed: !isOpen }"
+      >
         <div class="flex w-full flex-col">
           <NuxtLink to="/">{{ t("menu.home") }}</NuxtLink>
           <hr />
@@ -90,9 +81,7 @@
             info@autrona.lt
           </a>
           <hr />
-          <a
-            href="https://web.skype.com/share?contact=autrona"
-            target="_blank">
+          <a href="https://web.skype.com/share?contact=autrona" target="_blank">
             <i class="fa-brands fa-skype text-lg w-8" />
             Skype
           </a>
@@ -114,7 +103,8 @@
               type="select"
               name="locale"
               v-model="locale"
-              :options="availableLocales" />
+              :options="availableLocales"
+            />
           </div>
         </div>
       </div>
@@ -123,9 +113,9 @@
 </template>
 
 <script lang="ts" setup>
-import {useI18n} from "vue-i18n";
+import { useI18n } from "vue-i18n";
 import lockScroll from "../utils/lockScroll";
-const {t, locale, availableLocales} = useI18n();
+const { t, locale, availableLocales } = useI18n();
 const isOpen = ref(false);
 
 const onHamburgerClick = () => {
@@ -142,7 +132,7 @@ watch(
   },
   {
     immediate: true,
-  }
+  },
 );
 </script>
 

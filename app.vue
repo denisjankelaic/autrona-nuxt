@@ -1,8 +1,12 @@
 <template>
   <Html :lang="locale">
-    <div>
-      <NuxtPage />
-    </div>
+    <Body
+      class="antialiased duration-300 transition-colors dark:text-gray-200 bg-black">
+      <NuxtLayout>
+        <NuxtLoadingIndicator />
+        <NuxtPage />
+      </NuxtLayout>
+    </Body>
   </Html>
 </template>
 
