@@ -32,11 +32,11 @@
             <hr />
             <div class="flex flex-col gap-2">
               <h2 class="font-medium">{{ t("career.candidancy") }}</h2>
-              <p class="flex flex-col text-sm gap-2">
-                <span>
-                  <span v-html="t('career.send-cvs')" />
-                  <span class="font-medium">autrona@zebra.lt</span>
-                </span>
+              <p class="text-sm">
+                <span v-html="t('career.send-cvs')" />
+                <span class="font-medium">autrona@zebra.lt</span>
+              </p>
+              <p class="text-sm">
                 <span>
                   <span> {{ t("career.more-info-phone") }} </span>
                   <span class="font-medium">+370 699 45118</span>
