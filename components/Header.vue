@@ -240,4 +240,10 @@ a.router-link-active {
     text-align: center;
   }
 }
+
+@media (prefers-color-scheme: light) {
+  :deep(.formkit-option) {
+    color: black;
+  }
+}
 </style>
