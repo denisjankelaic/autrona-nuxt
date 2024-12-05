@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-pastelWhite">
+  <div class="bg-pastelWhite flex flex-col h-full flex-1">
     <Content>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
         <div class="flex flex-col gap-4">
@@ -52,8 +52,7 @@
             format="webp"
             quality="95"
             height="400"
-            alt="Career page hero"
-          />
+            alt="Career page hero" />
 
           <NuxtImg
             src="/hero/career-desktop.jpg"
@@ -61,8 +60,7 @@
             format="webp"
             quality="95"
             height="600"
-            alt="Career page hero"
-          />
+            alt="Career page hero" />
         </div>
       </div>
     </Content>
@@ -70,8 +68,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+import {useI18n} from "vue-i18n";
+const {t} = useI18n();
 
 definePageMeta({
   layout: "main",

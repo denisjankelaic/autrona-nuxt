@@ -1,14 +1,17 @@
 <template>
-  <div>
-    <div class="bg-white mb-16">
-      <NuxtImg
-        class="w-full min-h-[150px] object-cover"
-        src="/hero/cargo-side.jpg"
-        format="webp"
-        quality="98"
-        height="500"
-        alt="Cargo page hero"
-      />
+  <div class="bg-white pb-16 flex flex-col h-full flex-1">
+    <div class="bg-black">
+      <div class="max-w-[1440px] m-auto mt-12">
+        <NuxtImg
+          class="w-full min-h-[150px] object-cover"
+          src="/hero/cargo-side.jpg"
+          format="webp"
+          quality="98"
+          height="500"
+          alt="Cargo page hero" />
+      </div>
+    </div>
+    <div class="bg-white -mt-[32px] pt-[52px] flex-1">
       <Content>
         <div class="flex flex-col gap-8">
           <h1 class="text-2xl md:text-4xl font-light text-center uppercase">
@@ -16,8 +19,7 @@
           </h1>
           <div class="flex flex-col gap-4">
             <div
-              class="uppercase tracking-widest font-semibold text-text2 md:my-4"
-            >
+              class="uppercase tracking-widest font-semibold text-text2 md:my-4">
               {{ t("cargo.basis-title") }}
             </div>
             <div class="w-full relative flex gap-4 flex-col">
@@ -49,8 +51,7 @@
           </div>
           <div>
             <div
-              class="uppercase tracking-widest font-semibold text-text2 my-4"
-            >
+              class="uppercase tracking-widest font-semibold text-text2 my-4">
               {{ t("cargo.priorities") }}
             </div>
             <div class="w-full relative flex gap-4 flex-col">
@@ -66,8 +67,7 @@
           </div>
           <div>
             <div
-              class="uppercase tracking-widest font-semibold text-text2 my-4"
-            >
+              class="uppercase tracking-widest font-semibold text-text2 my-4">
               {{ t("cargo.trailer-title") }}
             </div>
             <div class="w-full relative flex gap-2 flex-col">
@@ -79,8 +79,7 @@
           </div>
           <div class="flex flex-col gap-4">
             <div
-              class="uppercase tracking-widest font-semibold text-text2 my-4"
-            >
+              class="uppercase tracking-widest font-semibold text-text2 my-4">
               {{ t("cargo.security-equipment") }}
             </div>
             <div class="w-full relative flex gap-2 flex-col">
@@ -96,19 +95,27 @@
           </h1>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 lg:gap-4 my-4">
             <div class="card shadow-md p-2">
-              <div class="flag shadow-sm" v-html="LT"></div>
+              <div
+                class="flag shadow-sm"
+                v-html="LT"></div>
               <span class="subtitle"> {{ t("cargo.lithuania") }} </span>
             </div>
             <div class="card shadow-md p-2">
-              <div class="flag shadow-sm" v-html="DE" />
+              <div
+                class="flag shadow-sm"
+                v-html="DE" />
               <span class="subtitle"> {{ t("cargo.germany") }} </span>
             </div>
             <div class="card shadow-md p-2">
-              <div class="flag shadow-sm" v-html="IT"></div>
+              <div
+                class="flag shadow-sm"
+                v-html="IT"></div>
               <span class="subtitle"> {{ t("cargo.italy") }} </span>
             </div>
             <div class="card shadow-md p-2">
-              <div class="flag shadow-sm" v-html="CZ"></div>
+              <div
+                class="flag shadow-sm"
+                v-html="CZ"></div>
               <span class="subtitle"> {{ t("cargo.czechia") }} </span>
             </div>
           </div>
@@ -119,10 +126,10 @@
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from "vue-i18n";
-import { DE, LT, IT, CZ } from "country-flag-icons/string/3x2";
+import {useI18n} from "vue-i18n";
+import {DE, LT, IT, CZ} from "country-flag-icons/string/3x2";
 
-const { t } = useI18n();
+const {t} = useI18n();
 definePageMeta({
   layout: "main",
 });
@@ -151,7 +158,6 @@ definePageMeta({
 .flag :deep(svg) {
   height: 3rem;
   border-radius: 4px;
-  border: 1px solid black;
 }
 
 p {

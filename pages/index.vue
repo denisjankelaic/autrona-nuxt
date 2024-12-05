@@ -1,11 +1,10 @@
 <template>
-  <div>
+  <div class="flex flex-col h-full flex-1">
     <div class="p-8 lg:p-16 w-full bg-black">
       <Content>
         <div class="flex justify-center w-full">
           <div
-            class="w-full flex items-center justify-center gap-2 text-lightGreen max-w-96"
-          >
+            class="w-full flex items-center justify-center gap-2 text-lightGreen max-w-96">
             <hr class="w-full border-lightGreen" />
             <h2 class="uppercase italic">{{ t("home.experience") }}</h2>
             <hr class="w-full border-lightGreen" />
@@ -20,36 +19,33 @@
           </h1>
           <div>
             <button
-              class="text-gray-300 bg-transparent p-4 text-sm flex items-center hover:[&>a]:underline"
-            >
+              class="text-gray-300 bg-transparent p-4 text-sm flex items-center hover:[&>a]:underline">
               <NuxtLink to="/contacts">
                 {{ t("common.contact-us") }}
               </NuxtLink>
               <i
-                class="fa-solid fa-chevron-right text-lightGreen text-xs ml-2"
-              ></i>
+                class="fa-solid fa-chevron-right text-lightGreen text-xs ml-2"></i>
             </button>
           </div>
         </div>
       </Content>
     </div>
-    <div class="w-full h-auto bg-black flex justify-center items-end">
+    <div
+      class="w-full h-auto bg-black flex justify-center items-end max-w-[1440px] mx-auto z-10">
       <NuxtImg
         class="block md:hidden"
         src="/hero/hero-mobile.jpg"
         format="webp"
         height="450"
-        alt="Home page hero"
-      />
+        alt="Home page hero" />
       <NuxtImg
         class="hidden md:block w-full"
-        src="/hero/hero-desktop.png"
+        src="/hero/hero-desktop.jpg"
         format="webp"
         height="450"
-        alt="Home page hero"
-      />
+        alt="Home page hero" />
     </div>
-    <div class="bg-white py-16">
+    <div class="bg-white pb-16 -mt-[85px] pt-[100px] flex-1">
       <Services />
       <AboutUs />
     </div>
@@ -57,8 +53,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+import {useI18n} from "vue-i18n";
+const {t} = useI18n();
 
 definePageMeta({
   layout: "main",

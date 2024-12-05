@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-pastelWhite">
+  <div class="bg-pastelWhite flex flex-col h-full flex-1">
     <Content>
       <div class="my-6 mb-12">
         <div class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4">
@@ -58,20 +58,17 @@
         </div>
         <div class="flex gap-4 flex-col md:flex-row">
           <div
-            class="w-full h-[300px] white-box shadow-md rounded-md !p-0 overflow-hidden"
-          >
+            class="w-full h-[300px] white-box shadow-md rounded-md !p-0 overflow-hidden">
             <LMap
               ref="map"
               :zoom="zoom"
               :center="[54.41543, 24.00727]"
-              :use-global-leaflet="false"
-            >
+              :use-global-leaflet="false">
               <LTileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&amp;copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
                 layer-type="base"
-                name="OpenStreetMap"
-              />
+                name="OpenStreetMap" />
               <LMarker :lat-lng="[54.41543, 24.00727]" />
             </LMap>
           </div>
@@ -120,8 +117,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
+import {useI18n} from "vue-i18n";
+const {t} = useI18n();
 const zoom = ref(15);
 
 definePageMeta({
