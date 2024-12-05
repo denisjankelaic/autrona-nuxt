@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white pb-16 flex flex-col h-full flex-1">
-    <div class="bg-black z-10">
+    <div class="bg-black">
       <div class="max-w-[1440px] m-auto mt-12">
         <NuxtImg
           class="w-full min-h-[150px] object-cover"
@@ -11,7 +11,7 @@
           alt="Cargo page hero" />
       </div>
     </div>
-    <div class="bg-white -mt-[32px] pt-[52px] flex-1">
+    <div class="bg-white lg:-mt-[32px] pt-8 lg:pt-[52px] flex-1">
       <Content>
         <div class="flex flex-col gap-8">
           <h1 class="text-2xl md:text-4xl font-light text-center uppercase">
