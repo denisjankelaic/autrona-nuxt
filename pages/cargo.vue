@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white pb-16 flex flex-col h-full flex-1">
-    <div class="bg-black">
+    <div class="bg-black z-10">
       <div class="max-w-[1440px] m-auto mt-12">
         <NuxtImg
           class="w-full min-h-[150px] object-cover"
