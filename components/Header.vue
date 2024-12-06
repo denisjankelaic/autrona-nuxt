@@ -241,9 +241,8 @@ a.router-link-active {
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :deep(.formkit-option) {
-    color: black;
-  }
+:deep(.formkit-option) {
+  color: black;
+  background-color: white;
 }
 </style>
