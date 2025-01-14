@@ -76,7 +76,8 @@ export default defineNuxtConfig({
   },
   target: "static",
   ssr: true,
-  nitro: {
-    preset: "static",
-  },
+  // For static website.
+  // nitro: {
+  //   preset: "static",
+  // },
 });
