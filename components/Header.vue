@@ -6,7 +6,7 @@
       <Content>
         <div class="flex py-4 justify-between w-full gap-4">
           <NuxtLink to="/">
-            <img
+            <NuxtImg
               src="/logo_transparent.png"
               class="h-7 object-contain"
               alt="Autrona" />
@@ -63,7 +63,7 @@
       <NuxtLink
         to="/"
         class="mx-4">
-        <img
+        <NuxtImg
           src="/logo_transparent.png"
           class="h-7"
           alt="Autrona" />

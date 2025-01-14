@@ -64,7 +64,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: "https://autrona-nuxt.vercel.app/",
+    url: "https://autrona.lt/",
     name: "Autrona",
   },
   compatibilityDate: "2024-11-26",
