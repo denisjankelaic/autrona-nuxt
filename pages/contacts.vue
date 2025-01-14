@@ -3,67 +3,40 @@
     <Content>
       <div class="my-6 mb-12">
         <div class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4">
-          <div class="contact">
+          <div
+            v-for="(contact, index) in clevel"
+            class="contact"
+            :key="index">
             <h1 class="text-xs font-medium uppercase">
-              {{ t("contacts.director") }}
+              {{ contact.job }}
             </h1>
-            <h1 class="font-medium mb-4">Rimas Žukauskas</h1>
-            <p class="flex flex-col text-sm">
-              <span>{{ t("common.phone") }} +370 699 45118</span>
-              <span>{{ t("common.email") }} rimas@autrona.lt </span>
+            <h1 class="font-semibold mb-4">{{ contact.name }}</h1>
+            <p class="flex gap-2 text-sm">
+              <span class="font-medium">{{ t("common.phone") }}</span>
+              <span> {{ contact.phone }}</span>
             </p>
-          </div>
-          <div class="contact">
-            <h1 class="text-xs font-medium uppercase">
-              {{ t("contacts.personnel-specialist") }}
-            </h1>
-            <h1 class="font-medium mb-4">Jurgita Užemeckienė</h1>
-            <p class="flex flex-col text-sm">
-              <span>{{ t("common.phone") }} +370 655 22727</span>
-              <span>{{ t("common.email") }} jurgita@autrona.lt </span>
+            <p class="flex gap-2 text-sm">
+              <span class="font-medium">{{ t("common.email") }}</span>
+              <span> {{ contact.email }} </span>
             </p>
           </div>
         </div>
         <div
           class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-4 my-4">
-          <div>
+          <div
+            v-for="(manager, index) in managers"
+            :key="index">
             <h1 class="text-xs font-medium uppercase">
-              {{ t("contacts.transport-manager") }}
+              {{ manager.job }}
             </h1>
-            <h1 class="font-medium mb-4">Justas Žukauskas</h1>
-            <p class="flex flex-col text-sm">
-              <span>{{ t("common.phone") }} +370 650 95557</span>
-              <span>{{ t("common.email") }} justas@autrona.lt </span>
+            <h1 class="font-semibold mb-4">{{ manager.name }}</h1>
+            <p class="flex gap-2 text-sm">
+              <span class="font-medium">{{ t("common.phone") }}</span>
+              <span> {{ manager.phone }} </span>
             </p>
-          </div>
-          <div>
-            <h1 class="text-xs font-medium uppercase">
-              {{ t("contacts.transport-manager-w") }}
-            </h1>
-            <h1 class="font-medium mb-4">Paulina Tamulionyte</h1>
-            <p class="flex flex-col text-sm">
-              <span>{{ t("common.phone") }} +370 669 69206</span>
-              <span>{{ t("common.email") }} paulina@autrona.lt </span>
-            </p>
-          </div>
-          <div>
-            <h1 class="text-xs font-medium uppercase">
-              {{ t("contacts.transport-manager-w") }}
-            </h1>
-            <h1 class="font-medium mb-4">Laura Rimienė</h1>
-            <p class="flex flex-col text-sm">
-              <span>{{ t("common.phone") }} +370 640 19939</span>
-              <span>{{ t("common.email") }} laura@autrona.lt </span>
-            </p>
-          </div>
-          <div>
-            <h1 class="text-xs font-medium uppercase">
-              {{ t("contacts.transport-manager") }}
-            </h1>
-            <h1 class="font-medium mb-4">Vitalijus Žilvys</h1>
-            <p class="flex flex-col text-sm">
-              <span>{{ t("common.phone") }} +370 652 06054</span>
-              <span>{{ t("common.email") }} vitalijus@autrona.lt </span>
+            <p class="flex gap-2 text-sm">
+              <span class="font-medium">{{ t("common.email") }}</span>
+              <span> {{ manager.email }} </span>
             </p>
           </div>
         </div>
@@ -135,6 +108,48 @@ const zoom = ref(15);
 definePageMeta({
   layout: "main",
 });
+
+const clevel = [
+  {
+    job: t("contacts.director"),
+    name: "Rimas Žukauskas",
+    phone: "+370 699 45118",
+    email: "rimas@autrona.lt",
+  },
+  {
+    job: t("contacts.personnel-specialist"),
+    name: "Jurgita Užemeckienė",
+    phone: "+370 655 22727",
+    email: "jurgita@autrona.lt",
+  },
+];
+
+const managers = [
+  {
+    job: t("contacts.transport-manager"),
+    name: "Justas Žukauskas",
+    phone: "+370 650 95557",
+    email: "justas@autrona.lt",
+  },
+  {
+    job: t("contacts.transport-manager-w"),
+    name: "Paulina Tamulionyte",
+    phone: "+370 669 69206",
+    email: "paulina@autrona.lt",
+  },
+  {
+    job: t("contacts.transport-manager-w"),
+    name: "Laura Rimienė",
+    phone: "+370 640 19939",
+    email: "laura@autrona.lt",
+  },
+  {
+    job: t("contacts.transport-manager"),
+    name: "Vitalijus Žilvys",
+    phone: "+370 652 06054",
+    email: "vitalijus@autrona.lt",
+  },
+];
 </script>
 
 <style lang="css" scoped>

@@ -53,7 +53,6 @@
             quality="95"
             height="400"
             alt="Career page hero" />
-
           <NuxtImg
             src="/hero/career-desktop.jpg"
             class="hidden md:block h-full w-full object-cover"

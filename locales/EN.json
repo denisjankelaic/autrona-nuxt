@@ -21,8 +21,9 @@
     "email": "Email:",
     "lithuania": "Lithuania",
     "fax": "Fax.",
+    "phone-full": "Phone number",
     "email-full": "Email",
-    "error": "Įvyko klaida."
+    "error": "There's been an error."
   },
   "services": {
     "we-offer": "What we offer",
