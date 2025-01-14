@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "serve": "esno .output/server/index.mjs",
     "p:ish": "pnpm install --shamefully-hoist",
-    "p:up": "pnpm up"
+    "p:up": "pnpm up",
+    "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.7.1",

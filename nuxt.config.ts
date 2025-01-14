@@ -74,4 +74,6 @@ export default defineNuxtConfig({
   sitemap: {
     strictNuxtContentPaths: true,
   },
+  target: "static",
+  ssr: true,
 });

@@ -24,8 +24,9 @@
             </p>
           </div>
         </div>
-        <div class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4">
-          <div class="contact">
+        <div
+          class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-4 my-4">
+          <div>
             <h1 class="text-xs font-medium uppercase">
               {{ t("contacts.transport-manager") }}
             </h1>
@@ -35,7 +36,7 @@
               <span>{{ t("common.email") }} justas@autrona.lt </span>
             </p>
           </div>
-          <div class="contact">
+          <div>
             <h1 class="text-xs font-medium uppercase">
               {{ t("contacts.transport-manager-w") }}
             </h1>
@@ -45,7 +46,7 @@
               <span>{{ t("common.email") }} paulina@autrona.lt </span>
             </p>
           </div>
-          <div class="contact">
+          <div>
             <h1 class="text-xs font-medium uppercase">
               {{ t("contacts.transport-manager-w") }}
             </h1>
@@ -53,6 +54,16 @@
             <p class="flex flex-col text-sm">
               <span>{{ t("common.phone") }} +370 640 19939</span>
               <span>{{ t("common.email") }} laura@autrona.lt </span>
+            </p>
+          </div>
+          <div>
+            <h1 class="text-xs font-medium uppercase">
+              {{ t("contacts.transport-manager") }}
+            </h1>
+            <h1 class="font-medium mb-4">Vitalijus Žilvys</h1>
+            <p class="flex flex-col text-sm">
+              <span>{{ t("common.phone") }} +370 652 06054</span>
+              <span>{{ t("common.email") }} vitalijus@autrona.lt </span>
             </p>
           </div>
         </div>
