@@ -34,12 +34,12 @@
               <h2 class="font-medium">{{ t("career.candidancy") }}</h2>
               <p class="text-sm">
                 <span v-html="t('career.send-cvs')" />
-                <span class="font-medium pl-2">info@autrona.lt</span>
+                <span class="font-medium">info@autrona.lt</span>
               </p>
               <p class="text-sm">
                 <span>
                   <span> {{ t("career.more-info-phone") }} </span>
-                  <span class="font-medium pl-2">+370 699 45118</span>
+                  <span class="font-medium">+370 699 45118</span>
                 </span>
               </p>
             </div>
