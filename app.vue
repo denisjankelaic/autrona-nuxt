@@ -18,6 +18,7 @@ import {useI18n} from "vue-i18n";
 const {t, locale} = useI18n();
 const image = useImage();
 const route = useRoute();
+const favicon = useFavicon();
 
 const heroUrl = computed(() => {
   let originalUrl = `hero/cargo-side.jpg`;
@@ -29,7 +30,19 @@ const heroUrl = computed(() => {
   });
 });
 
-const publicUrl = "https://autrona.lt/";
+const faviconUlr = computed(() => {
+  let originalUrl = `hero/fav.png`;
+
+  return image(originalUrl, {
+    format: "ico",
+    quality: 100,
+    height: 32,
+  });
+});
+
+favicon.value = faviconUlr.value;
+
+const publicUrl = "https://autrona.lt";
 
 const metaImg = computed(() => {
   return typeof window !== "undefined"
@@ -37,7 +50,7 @@ const metaImg = computed(() => {
     : urlJoin(publicUrl, heroUrl.value);
 });
 
-const metaUrl = computed(() => urlJoin(publicUrl, route.path, "/"));
+const metaUrl = computed(() => urlJoin(publicUrl, route.path));
 
 const meta = [
   {
