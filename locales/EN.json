@@ -23,7 +23,8 @@
     "fax": "Fax.",
     "phone-full": "Phone number",
     "email-full": "Email",
-    "error": "There's been an error."
+    "error": "There's been an error.",
+    "join-us": "Join our team!"
   },
   "services": {
     "we-offer": "What we offer",
@@ -64,7 +65,7 @@
   "career": {
     "career": "Career",
     "looking-for": "We are currently looking for the following specialists:",
-    "driver": "Driver-Forwarder",
+    "driver": "Driver - Forwarder",
     "nature-of-work": "Nature of work:",
     "cargo-transportation": "Cargo transportation from Western Europe to CIS countries",
     "requirements": "Requirements:",

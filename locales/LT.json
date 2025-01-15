@@ -23,7 +23,8 @@
     "fax": "Fax.",
     "phone-full": "Telefono numeris",
     "email-full": "El. paštas",
-    "error": "There was an error."
+    "error": "There was an error.",
+    "join-us": "Prisijunkite prie mūsų komandos!"
   },
   "services": {
     "we-offer": "Savo klientams galime pasiūlyti",
@@ -64,7 +65,7 @@
   "career": {
     "career": "Karjera",
     "looking-for": "Šiuo metu ieškome šių specialistų:",
-    "driver": "Vairuotojas-ekspeditorius",
+    "driver": "Vairuotojas - ekspeditorius",
     "nature-of-work": "Darbo pobūdis:",
     "cargo-transportation": "Krovinių gabenimas iš Vakarų Europos į NVS šalis",
     "requirements": "Reikalavimai:",

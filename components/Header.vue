@@ -1,14 +1,14 @@
 <template>
   <div
     id="header"
-    class="header w-full flex top-0 z-[100000]">
+    class="header w-full flex top-0 z-[100000] shadow-md">
     <div class="hidden md:flex w-full">
       <Content>
-        <div class="flex py-4 justify-between w-full gap-4">
+        <div class="flex py-4 justify-between w-full gap-4 items-center">
           <NuxtLink to="/">
             <NuxtImg
               src="/logo_transparent.png"
-              class="h-7 object-contain"
+              class="h-8 md:h-9 object-contain brightness-125"
               alt="Autrona" />
           </NuxtLink>
 

@@ -2,6 +2,10 @@
   <div class="bg-pastelWhite flex flex-col h-full flex-1">
     <Content>
       <div class="my-6 mb-12">
+        <h1 class="text-2xl md:text-4xl text-center my-4 md:my-8">
+          {{ t("common.contact-us") }}
+        </h1>
+
         <div class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4">
           <div
             v-for="(contact, index) in clevel"
@@ -109,7 +113,7 @@ definePageMeta({
   layout: "main",
 });
 
-const clevel = [
+const clevel = computed(() => [
   {
     job: t("contacts.director"),
     name: "Rimas Žukauskas",
@@ -122,9 +126,9 @@ const clevel = [
     phone: "+370 655 22727",
     email: "jurgita@autrona.lt",
   },
-];
+]);
 
-const managers = [
+const managers = computed(() => [
   {
     job: t("contacts.transport-manager"),
     name: "Justas Žukauskas",
@@ -149,7 +153,7 @@ const managers = [
     phone: "+370 652 06054",
     email: "vitalijus@autrona.lt",
   },
-];
+]);
 </script>
 
 <style lang="css" scoped>

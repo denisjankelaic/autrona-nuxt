@@ -1,12 +1,13 @@
 <template>
   <div class="bg-pastelWhite flex flex-col h-full flex-1">
     <Content>
+      <h1 class="text-2xl md:text-4xl text-center my-4 md:my-8">
+        {{ t("common.join-us") }}
+      </h1>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
         <div class="flex flex-col gap-4">
           <div class="white-box shadow-md p-4 rounded-md w-full">
-            <h1 class="text-lg font-medium uppercase">
-              {{ t("career.career") }}
-            </h1>
             <div class="flex flex-col gap-2">
               <h2 class="font-medium">{{ t("career.looking-for") }}</h2>
               <p class="flex flex-col text-sm">
