@@ -10,7 +10,7 @@
             <hr class="w-full border-lightGreen" />
           </div>
         </div>
-        <div class="py-8 flex flex-col justify-center items-center">
+        <div class="pt-8 flex flex-col justify-center items-center">
           <h1 class="text-4xl text-white font-light text-center">
             {{ t("home.slogan1") }}
           </h1>

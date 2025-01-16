@@ -63,7 +63,7 @@
             </a>
           </div>
         </div>
-        <hr class="border-gray-700" />
+        <hr class="border-text1" />
         <div class="text-white text-xs w-full text-center md:text-end">
           {{ t("common.footer-autrona") }}
         </div>

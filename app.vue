@@ -21,7 +21,7 @@ const route = useRoute();
 const favicon = useFavicon();
 
 const heroUrl = computed(() => {
-  let originalUrl = `hero/cargo-side.jpg`;
+  let originalUrl = `hero/hero-mobile.jpg`;
 
   return image(originalUrl, {
     format: "webp",
@@ -56,6 +56,10 @@ const meta = [
   {
     name: "og:title",
     content: t("meta.title"),
+  },
+  {
+    property: "og:description",
+    content: t("about.about-text1"),
   },
   {
     name: "og:url",
