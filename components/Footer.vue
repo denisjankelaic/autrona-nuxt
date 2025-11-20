@@ -5,7 +5,7 @@
     <Content>
       <div class="flex flex-col gap-4">
         <NuxtLink
-          to="/"
+          :to="localePath('/')"
           class="block m-auto md:m-0">
           <NuxtImg
             src="/logo_transparent.png"
@@ -16,10 +16,10 @@
           class="flex w-full justify-center flex-wrap gap-4 items-center md:justify-between">
           <div
             class="flex w-full text-white max-w-96 text-sm gap-4 items-center justify-center md:justify-start">
-            <NuxtLink to="/">{{ t("menu.home") }}</NuxtLink>
-            <NuxtLink to="/cargo">{{ t("menu.cargo") }}</NuxtLink>
-            <NuxtLink to="/contacts">{{ t("menu.contacts") }}</NuxtLink>
-            <NuxtLink to="/career">{{ t("menu.career") }}</NuxtLink>
+            <NuxtLink :to="localePath('/')">{{ t("menu.home") }}</NuxtLink>
+            <NuxtLink :to="localePath('/cargo')">{{ t("menu.cargo") }}</NuxtLink>
+            <NuxtLink :to="localePath('/contacts')">{{ t("menu.contacts") }}</NuxtLink>
+            <NuxtLink :to="localePath('/career')">{{ t("menu.career") }}</NuxtLink>
           </div>
           <div
             class="flex gap-4 items-center links md:hidden w-full justify-center">
@@ -75,6 +75,7 @@
 <script lang="ts" setup>
 import {useI18n} from "vue-i18n";
 const {t} = useI18n();
+const { localePath } = useLocalePath();
 </script>
 
 <style lang="css" scoped>

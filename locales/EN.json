@@ -54,6 +54,7 @@
   },
   "contacts": {
     "director": "Director",
+    "accountant": "Accountant",
     "personnel-specialist": "Personnel and Logistics Specialist",
     "transport-manager": "Transport Manager",
     "transport-manager-w": "Transport Manager",
@@ -109,6 +110,23 @@
     "czechia": "Czech Republic"
   },
   "meta": {
-    "title": "Autrona - International transportation"
+    "title": "Autrona - International transportation",
+    "description": "Having started its operations in 1998, UAB \"Autrona\" can today offer its clients high-quality logistics services that meet their needs throughout Europe and the CIS countries.",
+    "home": {
+      "title": "Autrona - International transportation",
+      "description": "Professional international cargo transportation services throughout Europe and CIS countries. Based on trust, driven by perfection."
+    },
+    "contacts": {
+      "title": "Contact Us - Autrona",
+      "description": "Get in touch with Autrona. Contact our team for international cargo transportation services. Located in Alytus, Lithuania."
+    },
+    "career": {
+      "title": "Career - Join Our Team - Autrona",
+      "description": "Join Autrona team! We are looking for professional drivers and freight forwarders. International cargo transportation career opportunities."
+    },
+    "cargo": {
+      "title": "Cargo Transportation Services - Autrona",
+      "description": "International transportation of standard, packaged cargo by tilt semi-trailer. Over 25 years of experience, serving Europe and CIS countries."
+    }
   }
 }

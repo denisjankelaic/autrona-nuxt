@@ -74,10 +74,37 @@ export default defineNuxtConfig({
   sitemap: {
     strictNuxtContentPaths: true,
   },
+  robots: {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/admin/"],
+      },
+    ],
+    sitemap: "https://autrona.lt/sitemap.xml",
+  },
   target: "static",
   ssr: true,
-  // For static website.
-  // nitro: {
-  //   preset: "static",
-  // },
+  nitro: {
+    prerender: {
+      routes: [
+        "/lt",
+        "/lt/",
+        "/lt/cargo",
+        "/lt/contacts",
+        "/lt/career",
+        "/en",
+        "/en/",
+        "/en/cargo",
+        "/en/contacts",
+        "/en/career",
+        "/ru",
+        "/ru/",
+        "/ru/cargo",
+        "/ru/contacts",
+        "/ru/career",
+      ],
+    },
+  },
 });

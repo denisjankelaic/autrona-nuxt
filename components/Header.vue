@@ -38,7 +38,7 @@
       <hr class="border-text1" />
       <Content>
         <div class="flex py-3 justify-between w-full gap-4 items-center">
-          <NuxtLink to="/">
+          <NuxtLink :to="localePath('/')">
             <NuxtImg
               src="/logo_transparent.png"
               class="h-8 md:h-9 object-contain brightness-125"
@@ -47,11 +47,11 @@
 
           <div
             class="flex justify-between w-full text-white max-w-[30rem] items-center">
-            <NuxtLink to="/">{{ t("menu.home") }}</NuxtLink>
-            <NuxtLink to="/cargo">{{ t("menu.cargo") }}</NuxtLink>
+            <NuxtLink :to="localePath('/')">{{ t("menu.home") }}</NuxtLink>
+            <NuxtLink :to="localePath('/cargo')">{{ t("menu.cargo") }}</NuxtLink>
 
-            <NuxtLink to="/contacts">{{ t("menu.contacts") }}</NuxtLink>
-            <NuxtLink to="/career">{{ t("menu.career") }}</NuxtLink>
+            <NuxtLink :to="localePath('/contacts')">{{ t("menu.contacts") }}</NuxtLink>
+            <NuxtLink :to="localePath('/career')">{{ t("menu.career") }}</NuxtLink>
           </div>
         </div>
       </Content>
@@ -66,7 +66,7 @@
         </i>
       </div>
       <NuxtLink
-        to="/"
+        :to="localePath('/')"
         class="mx-4">
         <NuxtImg
           src="/logo_transparent.png"
@@ -77,13 +77,13 @@
         class="sidebar absolute top-[51px] left-0 bg-pastelWhite h-screen w-screen"
         :class="{open: isOpen, closed: !isOpen}">
         <div class="flex w-full flex-col">
-          <NuxtLink to="/">{{ t("menu.home") }}</NuxtLink>
+          <NuxtLink :to="localePath('/')">{{ t("menu.home") }}</NuxtLink>
           <hr />
-          <NuxtLink to="/cargo">{{ t("menu.cargo") }}</NuxtLink>
+          <NuxtLink :to="localePath('/cargo')">{{ t("menu.cargo") }}</NuxtLink>
           <hr />
-          <NuxtLink to="/contacts">{{ t("menu.contacts") }}</NuxtLink>
+          <NuxtLink :to="localePath('/contacts')">{{ t("menu.contacts") }}</NuxtLink>
           <hr />
-          <NuxtLink to="/career">{{ t("menu.career") }}</NuxtLink>
+          <NuxtLink :to="localePath('/career')">{{ t("menu.career") }}</NuxtLink>
         </div>
         <div class="flex flex-col">
           <div class="p-4 mt-4 uppercase tracking-wider font-medium text-sm">
@@ -138,12 +138,27 @@
 import {useI18n} from "vue-i18n";
 import lockScroll from "../utils/lockScroll";
 const {t, locale, availableLocales} = useI18n();
+const { localePath, switchLocale } = useLocalePath();
 const isOpen = ref(false);
 const route = useRoute();
+const router = useRouter();
+
 const onHamburgerClick = () => {
   const newValue = !isOpen.value;
   isOpen.value = newValue;
 };
+
+watch(
+  locale,
+  async (newLocale) => {
+    const pathSegments = route.path.split("/").filter(Boolean);
+    const currentLang = pathSegments[0]?.toUpperCase();
+    
+    if (currentLang !== newLocale) {
+      await switchLocale(newLocale);
+    }
+  }
+);
 
 watch(
   route,
