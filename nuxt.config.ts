@@ -86,8 +86,25 @@ export default defineNuxtConfig({
   },
   target: "static",
   ssr: true,
-  // For static website.
-  // nitro: {
-  //   preset: "static",
-  // },
+  nitro: {
+    prerender: {
+      routes: [
+        "/lt",
+        "/lt/",
+        "/lt/cargo",
+        "/lt/contacts",
+        "/lt/career",
+        "/en",
+        "/en/",
+        "/en/cargo",
+        "/en/contacts",
+        "/en/career",
+        "/ru",
+        "/ru/",
+        "/ru/cargo",
+        "/ru/contacts",
+        "/ru/career",
+      ],
+    },
+  },
 });
