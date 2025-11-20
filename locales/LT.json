@@ -57,6 +57,7 @@
     "personnel-specialist": "Personalo ir logistikos specialistė",
     "transport-manager": "Transporto vadybininkas",
     "transport-manager-w": "Transporto vadybininkė",
+    "accountant": "Finansų vadybininkė",
     "correspondence": "Adresas korespondencijai",
     "registration-address": "Registracijos adresas",
     "company-code": "Įmonės kodas",
@@ -109,6 +110,23 @@
     "czechia": "Čekija"
   },
   "meta": {
-    "title": "Autrona - Tarptautiniai pervežimai"
+    "title": "Autrona - Tarptautiniai pervežimai",
+    "description": "1998 metais veiklą pradėjusi UAB „Autrona\" šiandien savo klientams gali pasiūlyti kokybiškas, jų poreikius atitinkančias logistikos paslaugas visoje Europoje ir NVS šalyse.",
+    "home": {
+      "title": "Autrona - Tarptautiniai pervežimai",
+      "description": "Profesionalios tarptautinio krovinių gabenimo paslaugos visoje Europoje ir NVS šalyse. Pagrįsta pasitikėjimu, varoma tobulumo."
+    },
+    "contacts": {
+      "title": "Kontaktai - Autrona",
+      "description": "Susisiekite su Autrona. Kontaktinė informacija tarptautinio krovinių gabenimo paslaugoms. Įsikūrę Alytuje, Lietuvoje."
+    },
+    "career": {
+      "title": "Karjera - Prisijunkite prie mūsų komandos - Autrona",
+      "description": "Prisijunkite prie Autrona komandos! Ieškome profesionalių vairuotojų ir ekspeditorių. Karjeros galimybės tarptautinio krovinių gabenimo srityje."
+    },
+    "cargo": {
+      "title": "Krovinių gabenimo paslaugos - Autrona",
+      "description": "Tarptautinis standartinių, supakuotų krovinių pervežimas tentinėmis puspriekabėmis. Daugiau nei 25 metų patirtis, aptarnaujame Europą ir NVS šalis."
+    }
   }
 }

@@ -128,8 +128,62 @@
 <script lang="ts" setup>
 import {useI18n} from "vue-i18n";
 import {DE, LT, IT, CZ} from "country-flag-icons/string/3x2";
+import urlJoin from "url-join";
 
 const {t} = useI18n();
+const route = useRoute();
+const image = useImage();
+const publicUrl = "https://autrona.lt";
+
+const pageTitle = computed(() => t("meta.cargo.title"));
+const pageDescription = computed(() => t("meta.cargo.description"));
+
+const cargoImg = computed(() => {
+  const originalUrl = `hero/cargo-side.jpg`;
+  const imgUrl = image(originalUrl, {
+    format: "webp",
+    quality: 98,
+    height: 500,
+  });
+  return typeof window !== "undefined"
+    ? imgUrl
+    : urlJoin(publicUrl, imgUrl);
+});
+
+const metaUrl = computed(() => urlJoin(publicUrl, route.path));
+
+useHead(() => ({
+  title: pageTitle.value,
+  meta: [
+    {
+      name: "description",
+      content: pageDescription.value,
+    },
+    {
+      property: "og:title",
+      content: pageTitle.value,
+    },
+    {
+      property: "og:description",
+      content: pageDescription.value,
+    },
+    {
+      property: "og:url",
+      content: metaUrl.value,
+    },
+    {
+      property: "og:image",
+      content: cargoImg.value,
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: metaUrl.value,
+    },
+  ],
+}));
+
 definePageMeta({
   layout: "main",
 });

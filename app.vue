@@ -52,43 +52,108 @@ const metaImg = computed(() => {
 
 const metaUrl = computed(() => urlJoin(publicUrl, route.path));
 
-const meta = [
+const metaDescription = computed(() => t("about.about-text1"));
+
+const meta = computed(() => [
+  // Standard meta tags
   {
-    name: "og:title",
+    name: "description",
+    content: metaDescription.value,
+  },
+  // Open Graph tags (must use property, not name)
+  {
+    property: "og:title",
     content: t("meta.title"),
   },
   {
     property: "og:description",
-    content: t("about.about-text1"),
+    content: metaDescription.value,
   },
   {
-    name: "og:url",
-    content: publicUrl,
+    property: "og:url",
+    content: metaUrl.value,
   },
   {
-    name: "og:image",
+    property: "og:image",
     content: metaImg.value,
   },
   {
-    name: "og:image:secure_url",
+    property: "og:image:secure_url",
     content: metaImg.value,
   },
   {
-    name: "og:type",
+    property: "og:type",
     content: "website",
   },
-];
+  {
+    property: "og:site_name",
+    content: "Autrona",
+  },
+  {
+    property: "og:locale",
+    content: locale.value === "LT" ? "lt_LT" : locale.value === "RU" ? "ru_RU" : "en_US",
+  },
+]);
+
+// Structured data (JSON-LD) for business/organization
+const structuredData = computed(() => ({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Autrona",
+  legalName: "UAB Autrona",
+  url: publicUrl,
+  logo: urlJoin(publicUrl, "/logo_transparent.png"),
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+370-315-77614",
+    contactType: "customer service",
+    email: "info@autrona.lt",
+    areaServed: ["LT", "EU", "CIS"],
+    availableLanguage: ["Lithuanian", "English", "Russian"],
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Naujoji g. 29A",
+    addressLocality: "Alytus",
+    postalCode: "LT-62175",
+    addressCountry: "LT",
+  },
+  sameAs: [],
+}));
+
+// Hreflang tags for multi-language support
+const hreflangLinks = computed(() => {
+  const locales = ["LT", "EN", "RU"];
+  const localeMap: Record<string, string> = {
+    LT: "lt",
+    EN: "en",
+    RU: "ru",
+  };
+  
+  return locales.map((loc) => ({
+    rel: "alternate",
+    hreflang: localeMap[loc] || loc.toLowerCase(),
+    href: urlJoin(publicUrl, route.path),
+  }));
+});
 
 useHead(() => ({
   title: t("meta.title"),
   titleTemplate: (title) => {
     return `${title} | Autrona.lt`;
   },
-  meta: [...meta],
+  meta: [...meta.value],
   link: [
     {
       rel: "canonical",
       href: metaUrl.value,
+    },
+    ...hreflangLinks.value,
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify(structuredData.value),
     },
   ],
 }));

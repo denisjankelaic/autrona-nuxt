@@ -74,6 +74,16 @@ export default defineNuxtConfig({
   sitemap: {
     strictNuxtContentPaths: true,
   },
+  robots: {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/admin/"],
+      },
+    ],
+    sitemap: "https://autrona.lt/sitemap.xml",
+  },
   target: "static",
   ssr: true,
   // For static website.

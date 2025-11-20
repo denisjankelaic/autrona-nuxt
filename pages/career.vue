@@ -69,7 +69,61 @@
 
 <script lang="ts" setup>
 import {useI18n} from "vue-i18n";
+import urlJoin from "url-join";
+
 const {t} = useI18n();
+const route = useRoute();
+const image = useImage();
+const publicUrl = "https://autrona.lt";
+
+const pageTitle = computed(() => t("meta.career.title"));
+const pageDescription = computed(() => t("meta.career.description"));
+
+const careerImg = computed(() => {
+  const originalUrl = `hero/career-desktop.jpg`;
+  const imgUrl = image(originalUrl, {
+    format: "webp",
+    quality: 95,
+    height: 600,
+  });
+  return typeof window !== "undefined"
+    ? imgUrl
+    : urlJoin(publicUrl, imgUrl);
+});
+
+const metaUrl = computed(() => urlJoin(publicUrl, route.path));
+
+useHead(() => ({
+  title: pageTitle.value,
+  meta: [
+    {
+      name: "description",
+      content: pageDescription.value,
+    },
+    {
+      property: "og:title",
+      content: pageTitle.value,
+    },
+    {
+      property: "og:description",
+      content: pageDescription.value,
+    },
+    {
+      property: "og:url",
+      content: metaUrl.value,
+    },
+    {
+      property: "og:image",
+      content: careerImg.value,
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: metaUrl.value,
+    },
+  ],
+}));
 
 definePageMeta({
   layout: "main",

@@ -6,10 +6,10 @@
           {{ t("common.contact-us") }}
         </h1>
 
-        <div class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4">
+        <div class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4 justify-evenly">
           <div
             v-for="(contact, index) in clevel"
-            class="contact"
+            class="contact flex flex-col items-center"
             :key="index">
             <h1 class="text-xs font-medium uppercase">
               {{ contact.job }}
@@ -26,10 +26,11 @@
           </div>
         </div>
         <div
-          class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-4 my-4">
+          class="white-box shadow-md !flex-row flex-wrap gap-8 mb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:gap-4 my-4">
           <div
             v-for="(manager, index) in managers"
-            :key="index">
+            :key="index"
+            class="flex flex-col items-center">
             <h1 class="text-xs font-medium uppercase">
               {{ manager.job }}
             </h1>
@@ -106,8 +107,44 @@
 
 <script lang="ts" setup>
 import {useI18n} from "vue-i18n";
+import urlJoin from "url-join";
+
 const {t} = useI18n();
+const route = useRoute();
 const zoom = ref(15);
+const publicUrl = "https://autrona.lt";
+
+const pageTitle = computed(() => t("meta.contacts.title"));
+const pageDescription = computed(() => t("meta.contacts.description"));
+const metaUrl = computed(() => urlJoin(publicUrl, route.path));
+
+useHead(() => ({
+  title: pageTitle.value,
+  meta: [
+    {
+      name: "description",
+      content: pageDescription.value,
+    },
+    {
+      property: "og:title",
+      content: pageTitle.value,
+    },
+    {
+      property: "og:description",
+      content: pageDescription.value,
+    },
+    {
+      property: "og:url",
+      content: metaUrl.value,
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: metaUrl.value,
+    },
+  ],
+}));
 
 definePageMeta({
   layout: "main",
@@ -137,16 +174,11 @@ const managers = computed(() => [
   },
   {
     job: t("contacts.transport-manager-w"),
-    name: "Paulina Tamulionyte",
+    name: "Aiva Sakavickienė",
     phone: "+370 669 69206",
     email: "paulina@autrona.lt",
   },
-  {
-    job: t("contacts.transport-manager-w"),
-    name: "Laura Rimienė",
-    phone: "+370 640 19939",
-    email: "laura@autrona.lt",
-  },
+
   {
     job: t("contacts.transport-manager"),
     name: "Vitalijus Žilvys",

@@ -55,6 +55,61 @@
 <script lang="ts" setup>
 import {useI18n} from "vue-i18n";
 const {t} = useI18n();
+const route = useRoute();
+const image = useImage();
+const publicUrl = "https://autrona.lt";
+
+const pageTitle = computed(() => t("meta.home.title"));
+const pageDescription = computed(() => t("meta.home.description"));
+
+const heroUrl = computed(() => {
+  const originalUrl = `hero/hero-mobile.jpg`;
+  return image(originalUrl, {
+    format: "webp",
+    quality: 75,
+    height: 800,
+  });
+});
+
+const metaImg = computed(() => {
+  return typeof window !== "undefined"
+    ? heroUrl.value
+    : urlJoin(publicUrl, heroUrl.value);
+});
+
+const metaUrl = computed(() => urlJoin(publicUrl, route.path));
+
+useHead(() => ({
+  title: pageTitle.value,
+  meta: [
+    {
+      name: "description",
+      content: pageDescription.value,
+    },
+    {
+      property: "og:title",
+      content: pageTitle.value,
+    },
+    {
+      property: "og:description",
+      content: pageDescription.value,
+    },
+    {
+      property: "og:url",
+      content: metaUrl.value,
+    },
+    {
+      property: "og:image",
+      content: metaImg.value,
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: metaUrl.value,
+    },
+  ],
+}));
 
 definePageMeta({
   layout: "main",

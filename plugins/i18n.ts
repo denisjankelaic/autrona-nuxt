@@ -18,3 +18,4 @@ export default defineNuxtPlugin(async ({vueApp}) => {
 
   vueApp.use(i18n);
 });
+
