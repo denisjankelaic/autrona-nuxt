@@ -71,13 +71,17 @@
 import {useI18n} from "vue-i18n";
 import urlJoin from "url-join";
 
-const {t} = useI18n();
+const {t, locale} = useI18n();
 const route = useRoute();
 const image = useImage();
 const publicUrl = "https://autrona.lt";
 
 const pageTitle = computed(() => t("meta.career.title"));
 const pageDescription = computed(() => t("meta.career.description"));
+
+const ogLocale = computed(() => {
+  return locale.value === "LT" ? "lt_LT" : locale.value === "RU" ? "ru_RU" : "en_US";
+});
 
 const careerImg = computed(() => {
   const originalUrl = `hero/career-desktop.jpg`;
@@ -116,6 +120,10 @@ useHead(() => ({
       property: "og:image",
       content: careerImg.value,
     },
+    {
+      property: "og:locale",
+      content: ogLocale.value,
+    },
   ],
   link: [
     {
@@ -129,3 +137,4 @@ definePageMeta({
   layout: "main",
 });
 </script>
+

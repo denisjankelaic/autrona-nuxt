@@ -1,5 +1,5 @@
 <template>
-  <Html :lang="locale">
+  <Html :lang="htmlLang">
     <Body
       class="antialiased duration-300 transition-colors dark:text-gray-200 bg-black">
       <NuxtLayout>
@@ -19,6 +19,15 @@ const {t, locale} = useI18n();
 const image = useImage();
 const route = useRoute();
 const favicon = useFavicon();
+
+const htmlLang = computed(() => {
+  const localeMap: Record<string, string> = {
+    LT: "lt",
+    EN: "en",
+    RU: "ru",
+  };
+  return localeMap[locale.value] || "lt";
+});
 
 const heroUrl = computed(() => {
   let originalUrl = `hero/hero-mobile.jpg`;
@@ -55,12 +64,10 @@ const metaUrl = computed(() => urlJoin(publicUrl, route.path));
 const metaDescription = computed(() => t("about.about-text1"));
 
 const meta = computed(() => [
-  // Standard meta tags
   {
     name: "description",
     content: metaDescription.value,
   },
-  // Open Graph tags (must use property, not name)
   {
     property: "og:title",
     content: t("meta.title"),
@@ -95,7 +102,6 @@ const meta = computed(() => [
   },
 ]);
 
-// Structured data (JSON-LD) for business/organization
 const structuredData = computed(() => ({
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -121,7 +127,6 @@ const structuredData = computed(() => ({
   sameAs: [],
 }));
 
-// Hreflang tags for multi-language support
 const hreflangLinks = computed(() => {
   const locales = ["LT", "EN", "RU"];
   const localeMap: Record<string, string> = {
@@ -130,11 +135,26 @@ const hreflangLinks = computed(() => {
     RU: "ru",
   };
   
-  return locales.map((loc) => ({
+  const pathSegments = route.path.split("/").filter(Boolean);
+  const firstSegment = pathSegments[0]?.toLowerCase();
+  const isLangInPath = ["lt", "en", "ru"].includes(firstSegment);
+  const pathWithoutLang = isLangInPath 
+    ? "/" + pathSegments.slice(1).join("/") 
+    : route.path;
+  
+  const links = locales.map((loc) => ({
     rel: "alternate",
     hreflang: localeMap[loc] || loc.toLowerCase(),
-    href: urlJoin(publicUrl, route.path),
+    href: urlJoin(publicUrl, `/${localeMap[loc]}${pathWithoutLang === "/" ? "" : pathWithoutLang}`),
   }));
+  
+  links.push({
+    rel: "alternate",
+    hreflang: "x-default",
+    href: urlJoin(publicUrl, `/lt${pathWithoutLang === "/" ? "" : pathWithoutLang}`),
+  });
+  
+  return links;
 });
 
 useHead(() => ({

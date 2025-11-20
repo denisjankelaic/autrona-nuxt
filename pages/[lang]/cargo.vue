@@ -130,13 +130,17 @@ import {useI18n} from "vue-i18n";
 import {DE, LT, IT, CZ} from "country-flag-icons/string/3x2";
 import urlJoin from "url-join";
 
-const {t} = useI18n();
+const {t, locale} = useI18n();
 const route = useRoute();
 const image = useImage();
 const publicUrl = "https://autrona.lt";
 
 const pageTitle = computed(() => t("meta.cargo.title"));
 const pageDescription = computed(() => t("meta.cargo.description"));
+
+const ogLocale = computed(() => {
+  return locale.value === "LT" ? "lt_LT" : locale.value === "RU" ? "ru_RU" : "en_US";
+});
 
 const cargoImg = computed(() => {
   const originalUrl = `hero/cargo-side.jpg`;
@@ -174,6 +178,10 @@ useHead(() => ({
     {
       property: "og:image",
       content: cargoImg.value,
+    },
+    {
+      property: "og:locale",
+      content: ogLocale.value,
     },
   ],
   link: [
@@ -219,3 +227,4 @@ p {
   font-weight: 300;
 }
 </style>
+

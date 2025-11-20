@@ -109,7 +109,7 @@
 import {useI18n} from "vue-i18n";
 import urlJoin from "url-join";
 
-const {t} = useI18n();
+const {t, locale} = useI18n();
 const route = useRoute();
 const zoom = ref(15);
 const publicUrl = "https://autrona.lt";
@@ -117,6 +117,10 @@ const publicUrl = "https://autrona.lt";
 const pageTitle = computed(() => t("meta.contacts.title"));
 const pageDescription = computed(() => t("meta.contacts.description"));
 const metaUrl = computed(() => urlJoin(publicUrl, route.path));
+
+const ogLocale = computed(() => {
+  return locale.value === "LT" ? "lt_LT" : locale.value === "RU" ? "ru_RU" : "en_US";
+});
 
 useHead(() => ({
   title: pageTitle.value,
@@ -136,6 +140,10 @@ useHead(() => ({
     {
       property: "og:url",
       content: metaUrl.value,
+    },
+    {
+      property: "og:locale",
+      content: ogLocale.value,
     },
   ],
   link: [
@@ -173,7 +181,7 @@ const managers = computed(() => [
     email: "justas@autrona.lt",
   },
   {
-    job: t("contacts.transport-manager-w"),
+    job: t("contacts.accountant"),
     name: "Aiva Sakavickienė",
     phone: "+370 669 69206",
     email: "paulina@autrona.lt",
@@ -201,3 +209,4 @@ const managers = computed(() => [
   min-width: 250px;
 }
 </style>
+
