@@ -32,6 +32,11 @@
               target="_blank">
               <i class="fa-brands fa-whatsapp text-lg w-6 h-6 flex-center"></i>
             </a>
+            <a
+              href="https://www.instagram.com/autrona_logistics/"
+              target="_blank">
+              <i class="fa-brands fa-instagram text-lg w-6 h-6 flex-center"></i>
+            </a>
           </div>
         </div>
       </Content>
@@ -117,6 +122,14 @@
             class="flex items-center">
             <i class="fa-brands fa-whatsapp text-lg w-8" />
             WhatsApp
+          </a>
+          <hr />
+          <a
+            href="https://www.instagram.com/autrona_logistics/"
+            target="_blank"
+            class="flex items-center">
+            <i class="fa-brands fa-instagram text-lg w-8" />
+            Instagram
           </a>
           <hr />
           <div class="lang-select flex items-center">

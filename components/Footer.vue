@@ -41,6 +41,12 @@
               <i
                 class="fa-brands fa-whatsapp text-white text-lg w-6 h-6 flex-center" />
             </a>
+            <a
+              href="https://www.instagram.com/autrona_logistics/"
+              target="_blank">
+              <i
+                class="fa-brands fa-instagram text-white text-lg w-6 h-6 flex-center" />
+            </a>
           </div>
           <div class="hidden gap-4 items-center links md:flex">
             <a href="mailto:info@autrona.lt">
@@ -60,6 +66,12 @@
             <a href="tel:%2B37065095557">
               <i
                 class="fa-brands fa-whatsapp text-white text-lg w-6 h-6 flex-center" />
+            </a>
+            <a
+              href="https://www.instagram.com/autrona_logistics/"
+              target="_blank">
+              <i
+                class="fa-brands fa-instagram text-white text-lg w-6 h-6 flex-center" />
             </a>
           </div>
         </div>
